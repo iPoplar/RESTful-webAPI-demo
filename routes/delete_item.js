@@ -5,6 +5,7 @@ var fs = require('fs');
 
 router.delete('/:id', function (req, res) {
     var id = req.params.id;
+    
     fs.readFile('./fixtures.json', 'UTF-8', function (err, data) {
         var items = JSON.parse(data);
         var isContained = false;
